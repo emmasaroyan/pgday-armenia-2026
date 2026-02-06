@@ -484,6 +484,10 @@ body {
     padding: 22px 36px;
 }
 
+.sponsor-note {
+    margin-top: 28px;
+}
+
 .sponsor-tier .info-primary {
     white-space: normal;
 }
