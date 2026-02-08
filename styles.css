@@ -574,6 +574,10 @@ body {
 .partner-block {
     margin-top: 32px;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    align-items: start;
 }
 
 .partner-title {
@@ -597,6 +601,20 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #0b1434;
+}
+
+.partner-kicker {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b1434;
+}
+
+.partner-group .partner-name {
+    margin-top: 8px;
+}
+
+.partner-group .partner-logo {
+    margin-top: 12px;
 }
 
 .partner-link {
