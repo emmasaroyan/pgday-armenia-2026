@@ -575,8 +575,8 @@ body {
     margin-top: 32px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
     align-items: start;
 }
 
