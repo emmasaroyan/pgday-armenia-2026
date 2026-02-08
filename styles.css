@@ -544,6 +544,7 @@ body {
 
 .organizer-card {
     text-align: center;
+    min-width: 0;
 }
 
 .organizer-card img {
@@ -896,8 +897,13 @@ body {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    html,
     body {
         overflow-x: hidden;
+    }
+
+    .committee-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -971,6 +977,77 @@ body {
 
     .sponsor-cards {
         grid-template-columns: 1fr;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .organizers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .organizer-card img {
+        width: 140px;
+        height: 140px;
+    }
+
+    #organizers .organizer-card p {
+        font-size: 14px;
+    }
+
+    .committee-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .committee-top .organizer-card img,
+    #program-committee .organizer-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #program-committee .organizer-card p {
+        font-size: 13px;
+    }
+
+    #program-committee .organizer-card .committee-meta {
+        font-size: 12px;
+    }
+
+    .sponsor-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-social a {
+        width: 72px;
+        height: 72px;
+    }
+
+    .footer-social svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-social-inline {
+        white-space: normal;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .footer-social a {
+        width: 56px;
+        height: 56px;
+    }
+
+    .footer-social svg {
+        width: 28px;
+        height: 28px;
     }
 }
 
