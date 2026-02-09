@@ -21,6 +21,15 @@ body {
     background-color: var(--light);
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .site-header {
     position: absolute;
     top: 0;
@@ -453,7 +462,8 @@ body {
     color: var(--elephant-blue);
     letter-spacing: 0.4px;
     text-transform: uppercase;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .info-card .info-body {
@@ -463,6 +473,7 @@ body {
     color: #1a2140;
     text-align: left;
     word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .info-card .info-body p + p {
@@ -509,6 +520,7 @@ body {
     color: #0b1434;
     flex-wrap: wrap;
     text-align: center;
+    overflow-wrap: anywhere;
 }
 
 .attend-description {
@@ -547,7 +559,7 @@ body {
     min-width: 0;
 }
 
-.organizer-card img {
+.organizer-card > img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -557,11 +569,18 @@ body {
     margin: 0 auto;
 }
 
+.organizer-link img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
 .organizer-card p {
     margin-top: 12px;
     font-size: 16px;
     font-weight: 600;
     color: #0b1434;
+    overflow-wrap: anywhere;
 }
 
 .organizer-card .committee-meta {
@@ -569,6 +588,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: #1a2140;
+    overflow-wrap: anywhere;
 }
 
 .partner-block {
@@ -601,12 +621,14 @@ body {
     font-size: 18px;
     font-weight: 600;
     color: #0b1434;
+    overflow-wrap: anywhere;
 }
 
 .partner-kicker {
     font-size: 18px;
     font-weight: 600;
     color: #0b1434;
+    overflow-wrap: anywhere;
 }
 
 .partner-group .partner-name {
@@ -732,6 +754,7 @@ body {
     font-size: 18px;
     color: #ffffff;
     opacity: 0.9;
+    overflow-wrap: anywhere;
 }
 
 .footer-social-inline {
@@ -1018,6 +1041,7 @@ body {
         font-size: 14px;
     }
 
+
     .committee-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
@@ -1035,6 +1059,16 @@ body {
 
     #program-committee .organizer-card .committee-meta {
         font-size: 12px;
+    }
+
+    .organizer-link img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .info-card .info-primary {
+        font-size: 16px;
+        letter-spacing: 0.2px;
     }
 
     .sponsor-actions {
