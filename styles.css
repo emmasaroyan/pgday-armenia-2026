@@ -500,6 +500,12 @@ img {
     margin-top: 28px;
 }
 
+.sponsor-prospectus {
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
 .sponsor-tier .info-primary {
     white-space: normal;
 }
@@ -521,6 +527,7 @@ img {
     flex-wrap: wrap;
     text-align: center;
     overflow-wrap: anywhere;
+    width: 100%;
 }
 
 .attend-description {
