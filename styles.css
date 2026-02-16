@@ -591,9 +591,13 @@ img {
 }
 
 .sponsor-actions a {
-    color: #0b1434;
+    color: var(--elephant-blue);
     text-decoration: underline;
     font-weight: 700;
+}
+
+.sponsor-prospectus {
+    color: var(--elephant-blue);
 }
 
 .sponsor-actions a:hover {
