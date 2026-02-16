@@ -591,13 +591,14 @@ img {
 }
 
 .sponsor-actions a {
-    color: inherit;
+    color: #1a0dab;
     text-decoration: underline;
     font-weight: 700;
 }
 
 .sponsor-prospectus {
-    color: inherit;
+    color: #1a0dab;
+    text-decoration: underline;
 }
 
 .sponsor-actions a:hover {
