@@ -601,6 +601,11 @@ img {
     text-decoration: underline;
 }
 
+.sponsor-email {
+    color: #0b1434;
+    text-decoration: none;
+}
+
 .sponsor-actions a:hover {
     text-decoration: underline;
 }
