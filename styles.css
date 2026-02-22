@@ -556,6 +556,16 @@ img {
     color: #1a2140;
 }
 
+.tier-list {
+    margin-top: 12px;
+    padding-left: 18px;
+    text-align: left;
+}
+
+.tier-list li + li {
+    margin-top: 6px;
+}
+
 .sponsor-actions {
     margin-top: 32px;
     display: flex;
