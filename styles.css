@@ -506,6 +506,11 @@ img {
     font-weight: 600;
 }
 
+.sponsor-prospectus a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
 .sponsor-tier .info-primary {
     white-space: normal;
 }
