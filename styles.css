@@ -500,6 +500,20 @@ img {
     margin-top: 28px;
 }
 
+.sponsor-addons {
+    margin-top: 28px;
+    text-align: left;
+}
+
+.sponsor-addons ul {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+.sponsor-addons li + li {
+    margin-top: 6px;
+}
+
 .sponsor-prospectus {
     margin-top: 32px;
     text-align: center;
