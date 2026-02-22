@@ -514,6 +514,10 @@ img {
     margin-top: 6px;
 }
 
+.sponsor-addons ul + p {
+    margin-top: 16px;
+}
+
 .sponsor-prospectus {
     margin-top: 32px;
     text-align: center;
