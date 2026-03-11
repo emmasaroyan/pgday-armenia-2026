@@ -591,8 +591,8 @@ img {
 }
 
 .organizers-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 28px;
     margin-top: 28px;
 }
@@ -1109,7 +1109,7 @@ img {
     }
 
     .organizers-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
         gap: 16px;
     }
 
