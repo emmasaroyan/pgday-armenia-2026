@@ -233,6 +233,7 @@ img {
     color: #ffffff;
 }
 
+#about h2,
 #organizers h2 {
     text-align: center;
 }
@@ -1141,6 +1142,10 @@ img {
 .section {
     padding: 64px 24px;
     background: #ffffff;
+}
+
+#about.section {
+    background: #e8efff;
 }
 
 .section.alt {
