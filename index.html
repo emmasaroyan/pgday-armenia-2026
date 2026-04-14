@@ -6,7 +6,7 @@
     <title>PGDay Armenia 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,12 +20,13 @@
                     </div>
                     <div class="nav-links">
                         <a href="#home">Home</a>
-                <a href="#welcome">About</a>
-                        <a href="#speak">Speak</a>
-                        <a href="#sponsor">Sponsor</a>
-                        <a href="#attend">Attend</a>
+                        <a href="#welcome">About</a>
+                        <a href="#schedule">Schedule</a>
+                        <a href="#featured-speakers">Speakers</a>
+                        <a href="#sponsor">Sponsors</a>
                         <a href="#venue">Venue</a>
                         <a href="#contact">Contact</a>
+                        <a href="#get-your-ticket" class="nav-ticket">Get Your Ticket!</a>
                     </div>
                 </nav>
             </header>
@@ -38,7 +39,8 @@
             <div class="container">
                 <h1>WELCOME TO PGDAY ARMENIA 2026</h1>
                 <div class="event-meta-card">
-                    <p class="event-meta">April 30, 2026<br>Armenia Marriott Hotel Yerevan</p>
+                    <p class="event-meta">April 30, 2026</p>
+                    <p class="event-meta">Armenia Marriott Hotel Yerevan</p>
                 </div>
                 <p class="event-tagline"><span class="text-black">The</span> <span class="tagline-highlight">#1 PostgreSQL Conference</span> <span class="text-black">in Armenia</span></p>
                 <p class="event-description">
@@ -47,36 +49,14 @@
                     industry. This one-day event brings together PostgreSQL users, developers, and contributors from around the world to connect,
                     learn, and help shape the future of PostgreSQL.
                 </p>
-                <p class="event-note">
-                    <strong>Registration opens soon!</strong><br>
-                    Apply to speak or sponsor, and help shape this year’s experience.
-                </p>
+                <p class="event-connect-tagline"><span class="tagline-highlight">Share, Learn &amp; Connect</span></p>
                 <div class="cta-row">
-                    <a class="button primary" href="#sponsor">Become a sponsor</a>
-                    <a class="button secondary" href="#speak">Become a speaker</a>
+                    <a href="#get-your-ticket" class="button button-cta-ticket primary">Get Your Ticket!</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="highlight-blue">Important Dates</h2>
-                <div class="dates-cards">
-                    <div class="date-card">
-                        <p>CONFERENCE DAY: <span class="highlight-blue">APRIL 30, 2026</span></p>
-                    </div>
-                    <div class="date-card">
-                        <p>CALL FOR PAPERS: <span class="highlight-blue">OPEN UNTIL MARCH 11 (AoE)</span></p>
-                    </div>
-                    <div class="date-card">
-                        <p>SPONSORSHIPS: <span class="highlight-blue">OPEN</span></p>
-                    </div>
-                    <div class="date-card">
-                        <p>REGISTRATION: <span class="highlight-blue">OPENING SOON</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Meet the Host section (`#about`) removed for now — re-add here when ready -->
 
         <section id="organizers" class="section alt">
             <div class="container">
@@ -95,21 +75,6 @@
                         <a class="organizer-link" href="https://www.linkedin.com/in/sarah-conway-05785570/" target="_blank" rel="noopener noreferrer" aria-label="Sarah Conway on LinkedIn">
                             <img class="linkedin-icon-img" src="assets/linkedin-icon.svg" alt="LinkedIn">
                         </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="speak" class="section alt">
-            <div class="container">
-                <h2>SUBMIT YOUR TALK TO PGDAY ARMENIA 2026</h2>
-                <div class="info-card">
-                    <p class="info-primary">Accepting speaker applications <span class="info-deadline">until March 11 (AoE)</span></p>
-                    <div class="info-body">
-                        <p><strong>Call for Papers is officially open!</strong> We’re excited to invite PostgreSQL professionals and enthusiasts to submit talk proposals.</p>
-                        <p>We welcome speakers of all experience levels, from beginner to advanced, to submit proposals for technical talks, technical sessions, or lightning talks, and to share their experiences and insights.</p>
-                        <p>We are committed to fostering a diverse and inclusive environment for both newcomers and experienced professionals. PGDay Armenia 2026 aims to be a fun, welcoming space where everyone can come together, share experiences, and learn from one another. We encourage you to submit your talk!</p>
-                        <p>To submit a talk, please fill out the <a href="https://forms.gle/UzNWrJrLhU2SVDYh7" target="_blank" rel="noopener noreferrer">speaker application form</a>. We can’t wait to hear your story!</p>
                     </div>
                 </div>
             </div>
@@ -175,20 +140,521 @@
             </div>
         </section>
 
-        <section id="sponsor" class="section alt">
+        <section id="schedule" class="section">
             <div class="container">
-                <h2>SPONSOR PGDAY ARMENIA 2026</h2>
-                <div class="info-card">
-                    <p class="info-primary">Accepting sponsorships</p>
-                    <div class="info-body">
-                        <p><strong>Sign up to become a sponsor and partner with us!</strong></p>
-                        <p>We’re carefully curating sponsor booths and non-exhibiting sponsors that are relevant, interesting, and connected to the PostgreSQL community. Our sponsors include tech companies of all sizes that build, operate, and innovate with PostgreSQL — from tools and infrastructure to services and extensions — actively supporting open source and shaping the future of PostgreSQL.</p>
-                        <p>Interested in sponsoring and meeting real PostgreSQL users? <strong>Complete the sponsor application form and submit your application.</strong> We’ll review it and follow up with next steps.</p>
-                        <p><strong>Or, email us at <a class="sponsor-email" href="mailto:pgdayarmenia@gmail.com">pgdayarmenia@gmail.com</a></strong> with the sponsorship level you’re interested in, and we’ll guide you through the process. We can’t wait to partner with you!</p>
-                        <div class="sponsor-actions">
-                            <a href="https://forms.gle/Jc1t3SHmG6E8uFvCA" target="_blank" rel="noopener noreferrer">Sponsor application form</a>
+                <h2 class="section-display-title">Conference Schedule</h2>
+                <div class="schedule-date-card">
+                    <time datetime="2026-04-30">April 30, 2026</time>
+                </div>
+                <article class="meet-host-card schedule-content-card">
+                    <div class="schedule-content-card-body schedule-content-card-body--timeline">
+                        <div class="schedule-timeline" role="list">
+                            <div class="schedule-row schedule-row--lead" role="listitem">
+                                <div class="schedule-time">8:30 AM</div>
+                                <div class="schedule-session"><span class="schedule-title">Check-in &amp; Badge Pickup</span></div>
+                            </div>
+                            <div class="schedule-row schedule-row--lead" role="listitem">
+                                <div class="schedule-time">9:30 AM</div>
+                                <div class="schedule-session">
+                                    <span class="schedule-title">Opening Remarks</span>
+                                    <div class="schedule-session-avatar-row">
+                                        <div class="schedule-avatar">
+                                            <img class="schedule-avatar-img" src="assets/emma-organizer.png" alt="Emma Saroyan">
+                                        </div>
+                                        <div class="schedule-speaker-info">
+                                            <p class="schedule-speaker-name">Emma Saroyan</p>
+                                            <p class="schedule-speaker-meta">Organizer</p>
+                                            <p class="schedule-speaker-meta">PGDay Armenia 2026</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row schedule-row--keynote">
+                                    <div class="schedule-time">9:40 AM – 9:55 AM <span class="schedule-meta">15 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-keynote-label">Keynote</span>
+                                        <span class="schedule-title schedule-title--keynote">Postgres@Amazon</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/robert-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Robert Treat</p>
+                                                <p class="schedule-speaker-meta">Amazon Web Services</p>
+                                                <p class="schedule-speaker-meta">Principal Database Engineer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>Amazon has a long history with PostgreSQL, whether it be internal company adoption or the many AWS services built around it. In this session, Robert Treat looks back across Amazon's journey with PostgreSQL, from its large-scale migration from Oracle to the creation of Amazon RDS for PostgreSQL. He will also look at how Amazon is making use of PostgreSQL today through current offerings such as Amazon Aurora for PostgreSQL and Amazon Aurora DSQL. We will conclude our conversation with a look at how AWS is working with the PostgreSQL community to address new and emerging database challenges.</p>
+                                </div>
+                            </details>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">10:00 AM – 10:30 AM <span class="schedule-meta">30 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">Debugging PostgreSQL Crashes in Production</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/varik-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Varik Matevosyan</p>
+                                                <p class="schedule-speaker-meta">Software Engineer</p>
+                                                <p class="schedule-speaker-meta">Amaros AI</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>Production database crashes can be difficult to investigate, especially when they occur under real workloads or involve custom extensions. This talk walks through a practical workflow for diagnosing PostgreSQL crashes using core dumps and GDB. We'll cover how to configure systems to capture useful crash data and how to reproduce and analyze failures locally. The session demonstrates how to inspect stack traces, examine memory, and identify the root cause of a crash. Special attention will be given to issues that arise in early-stage PostgreSQL extensions written in C or Rust. By the end, attendees will understand how to turn a production crash into actionable debugging information.</p>
+                                </div>
+                            </details>
+                            <div class="schedule-row schedule-row--break schedule-row--break-navy" role="listitem">
+                                <div class="schedule-time">10:30 AM – 10:50 AM <span class="schedule-meta">20 min</span></div>
+                                <div class="schedule-session"><span class="schedule-title">Morning Break</span></div>
+                            </div>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">10:50 AM – 11:40 AM <span class="schedule-meta">50 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">Deep dive into the PostgreSQL FrontEnd/BackEnd protocol</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/xavier-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Xavier Fischer</p>
+                                                <p class="schedule-speaker-meta">Principal Software Engineer</p>
+                                                <p class="schedule-speaker-meta">EDB</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>Have you ever wondered what exactly happens on the network when your application talks to PostgreSQL? In this session, we will dive deep into the Postgres Frontend/Backend protocol. We'll decode and document real-world message exchanges, and learn how to use Wireshark to capture and diagnose database communication issues. Whether you are doing support without the codebase, debugging stubborn performance bottlenecks, writing a custom driver, or simply curious about database internals, you will leave with a solid understanding of how Postgres communicates on the wire and the practical skills to troubleshoot it effectively.</p>
+                                </div>
+                            </details>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">11:50 AM – 12:20 PM <span class="schedule-meta">30 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">When the PostgreSQL Planner Gets Too Optimistic: Index Choice and Join Estimates</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/vlada-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Vlada Pogozhelskaya</p>
+                                                <p class="schedule-speaker-meta">Software Developer</p>
+                                                <p class="schedule-speaker-meta">Postgres Professional</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>PostgreSQL's query planner relies on selectivity and cardinality estimates to choose execution plans. When these estimates become unreliable, the planner may select plans that look inexpensive on paper but perform poorly in practice.</p>
+                                    <p>This talk examines two situations where this commonly happens: complex predicates that lead to poor index choices and joins with many conditions that cause severe cardinality underestimation. Using real execution plans, we will see why the planner struggles in these cases and how small changes in the planner's decision logic can produce more stable plans — without rewriting application queries.</p>
+                                    <p>The focus of the talk is on understanding how the planner makes decisions and how targeted changes in its behavior can make plan selection more predictable when estimates become unreliable.</p>
+                                </div>
+                            </details>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">12:30 PM – 1:00 PM <span class="schedule-meta">30 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">An Introduction to Postgres Indexes</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/dalto-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Dalto Curvelano</p>
+                                                <p class="schedule-speaker-meta">Staff Software Engineer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>Most developers know that indexes make queries faster, but few understand why — or when they don't. This talk starts from the physical layer, showing how PostgreSQL stores data on disk as heap files divided into 8KB pages, and how indexes create efficient lookup paths to avoid full sequential scans. We'll walk through each of the six built-in index types (B-Tree, Hash, BRIN, GIN, GiST, and SP-GiST), explaining what problems each one solves and where each falls short. Attendees will learn the real costs of indexes: disk space, write overhead, memory pressure, and query planner complexity. We'll cover practical techniques like partial indexes, covering indexes, expression indexes, and multi-column index design, with live EXPLAIN ANALYZE output showing the performance impact of each. The talk also covers PostgreSQL 18's new skip scan optimization and how it changes the rules for composite index design. You'll leave with a clear mental model for choosing the right index type and configuration for your workload.</p>
+                                </div>
+                            </details>
+                            <div class="schedule-row schedule-row--break schedule-row--break-navy" role="listitem">
+                                <div class="schedule-time">1:00 PM – 2:00 PM <span class="schedule-meta">60 min</span></div>
+                                <div class="schedule-session"><span class="schedule-title">Lunch</span></div>
+                            </div>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">2:00 PM – 2:50 PM <span class="schedule-meta">50 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">Window Functions Are Easier and More Powerful Than You Think</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/vik-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Vik Fearing</p>
+                                                <p class="schedule-speaker-meta">SQL and PostgreSQL Expert</p>
+                                                <p class="schedule-speaker-meta">Uniphant</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>In some circles, window functions are considered "Advanced SQL". In this presentation, I will show you how easy and powerful they actually are.</p>
+                                    <p>We will start with the basic concept of partitions and orderings, then move on to simple frame specifications. Then we will look at more intricate frames and exclusion options, and how they can simplify quite a bit of application processing.</p>
+                                    <p>Finally, we will look at extensions that provide additional window functions to those defined by the SQL Standard, and take a peek at what the future might bring.</p>
+                                </div>
+                            </details>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">2:55 PM – 3:10 PM <span class="schedule-meta">15 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">When PostgreSQL Orchestrates Analytics</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/ruslan-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Ruslan Senchukov</p>
+                                                <p class="schedule-speaker-meta">Program Manager</p>
+                                                <p class="schedule-speaker-meta">MindWise</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>Modern data tools often rely on PostgreSQL in ways that go far beyond traditional CRUD applications. In this session, we'll explore how we used PostgreSQL as a metadata engine to power a dynamic data manipulation platform that connects to external databases, transforms tables, and drives analytical dashboards. We'll walk through the architectural decisions behind separating metadata (PostgreSQL) from analytical storage (ClickHouse), and why that boundary matters. The talk will cover schema design strategies, query generation patterns, and performance considerations when users can define transformations dynamically. We'll also share lessons learned from production — including what broke, what scaled, and what we would redesign. Attendees will leave with practical insights on using PostgreSQL as the control layer of a modern data platform.</p>
+                                </div>
+                            </details>
+                            <div class="schedule-row schedule-row--break schedule-row--break-navy" role="listitem">
+                                <div class="schedule-time">3:10 PM – 3:30 PM <span class="schedule-meta">20 min</span></div>
+                                <div class="schedule-session"><span class="schedule-title">Afternoon Break</span></div>
+                            </div>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row schedule-row--highlight">
+                                    <div class="schedule-time">3:30 PM – 4:00 PM <span class="schedule-meta">30 min</span></div>
+                                    <div class="schedule-session">
+                                        <div class="schedule-session-head">
+                                            <span class="schedule-title">Choose Your Own Adventure: Postgres 18 Demos</span> <span class="schedule-badge schedule-badge--sponsor">Sponsored session</span>
+                                        </div>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/robert-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Robert Treat</p>
+                                                <p class="schedule-speaker-meta">Amazon Web Services</p>
+                                                <p class="schedule-speaker-meta">Principal Database Engineer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>You have heard great things about Postgres 18, but you just haven't had time to look into it. Sure, you want to learn more, but sitting through a bunch of slides sounds like a chore. What you really want is to see the features in Postgres 18 in action, so you can figure out what will help make your users (and you!) happier with as little work as possible. I'm Robert Treat, and I've put together a whirlwind tour of new features available in Postgres 18. I think I know what will help you get the most bang for the buck, but if I am wrong, we can choose the features that you want to see most. That's right, there are no slides in this presentation, not even an about-me slide; we're going straight into the database to help you learn what options will help you make the best case to get you upgraded.</p>
+                                </div>
+                            </details>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">4:05 PM – 4:35 PM <span class="schedule-meta">30 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">HugePages for PostgreSQL, Explained: What They Are, How to Size Them, and When They Help</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/alicja-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Alicja Kucharczyk</p>
+                                                <p class="schedule-speaker-meta">PostgreSQL Consulting Lead</p>
+                                                <p class="schedule-speaker-meta">Clouds on Mars</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>HugePages often sound simple ("use large pages for shared memory"), but in practice people get stuck on the same questions: what they actually change, how to calculate the right amount, and how to confirm the system is using them correctly. In this talk I will explain HugePages in plain language, then walk through a clear sizing approach you can repeat on your own systems. You'll leave knowing what to check before enabling them, what common mistakes to avoid, and how to decide if HugePages are worth it for your workload. I'll finish with benchmark results comparing performance with and without HugePages.</p>
+                                </div>
+                            </details>
+                            <details class="schedule-expand-details schedule-expand-details--speaker" role="listitem">
+                                <summary class="schedule-row">
+                                    <div class="schedule-time">4:40 PM – 5:30 PM <span class="schedule-meta">50 min</span></div>
+                                    <div class="schedule-session">
+                                        <span class="schedule-title">Postgres as an MCP Server</span>
+                                        <div class="schedule-session-avatar-row">
+                                            <div class="schedule-avatar">
+                                                <img class="schedule-avatar-img" src="assets/bruce-speaker.png" alt="">
+                                            </div>
+                                            <div class="schedule-speaker-info">
+                                                <p class="schedule-speaker-name">Bruce Momjian</p>
+                                                <p class="schedule-speaker-meta">Vice President and Postgres Evangelist</p>
+                                                <p class="schedule-speaker-meta">EDB</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="schedule-expand-description">
+                                    <p>Large language models are good at generating text, but can't easily report discrete, dynamic, and always-accurate results. They also can't take external actions. The model context protocol (MCP) has become the standard way for generative AI models to access external data and take external actions. This talk explains the purpose of MCPs, how they are used, and shows examples of database and non-database MCP servers.</p>
+                                </div>
+                            </details>
+                            <div class="schedule-row schedule-row--closing" role="listitem">
+                                <div class="schedule-time">5:30 PM</div>
+                                <div class="schedule-session">
+                                    <span class="schedule-title">Closing Remarks</span>
+                                    <div class="schedule-session-avatar-row">
+                                        <div class="schedule-avatar">
+                                            <img class="schedule-avatar-img" src="assets/emma-organizer.png" alt="Emma Saroyan">
+                                        </div>
+                                        <div class="schedule-speaker-info">
+                                            <p class="schedule-speaker-name">Emma Saroyan</p>
+                                            <p class="schedule-speaker-meta">Organizer</p>
+                                            <p class="schedule-speaker-meta">PGDay Armenia 2026</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schedule-row schedule-row--break schedule-row--break-navy" role="listitem">
+                                <div class="schedule-time">5:35 PM</div>
+                                <div class="schedule-session">
+                                    <span class="schedule-title">Social Event</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="featured-speakers" class="section">
+            <div class="container">
+                <h2 class="section-display-title">Featured Speakers</h2>
+                <div class="featured-speakers-grid">
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Robert Treat" aria-label="Robert Treat — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/robert-speaker.png" alt="Robert Treat">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Robert Treat</h3>
+                                        <p class="featured-speaker-meta">Principal Database Engineer</p>
+                                        <p class="featured-speaker-meta">Amazon Web Services</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Robert Treat</h3>
+                                    <p class="featured-speaker-bio">Working on database-backed, internet-based systems for over a decade, Robert is a published author and long-time open source contributor, having been recognized as a Major Contributor to the PostgreSQL project for his work over the years. An international speaker on databases, open source, and managing web operations at scale, you can find him online at <a href="https://www.youtube.com/@pgtreats" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@pgtreats</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Varik Matevosyan" aria-label="Varik Matevosyan — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/varik-speaker.png" alt="Varik Matevosyan">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Varik Matevosyan</h3>
+                                        <p class="featured-speaker-meta">Software Engineer</p>
+                                        <p class="featured-speaker-meta">Amaros AI</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Varik Matevosyan</h3>
+                                    <p class="featured-speaker-bio">Varik is a systems engineer specialized in PostgreSQL internals, high-performance data tooling, and cybersecurity. He has built extensions and infrastructure in C and Rust, integrating vector search, cloud-native systems, and AI-driven workflows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Xavier Fischer" aria-label="Xavier Fischer — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/xavier-speaker.png" alt="Xavier Fischer">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Xavier Fischer</h3>
+                                        <p class="featured-speaker-meta">Principal Software Engineer</p>
+                                        <p class="featured-speaker-meta">EDB</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Xavier Fischer</h3>
+                                    <p class="featured-speaker-bio">Xavier Fischer is a .NET Principal Software Engineer at EDB on the connectors team. He is passionate about .NET and open source. He is the co-maintainer of the GeoJSON.Net repository, created elevationapi.com, and has contributed to various open source projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Vlada Pogozhelskaya" aria-label="Vlada Pogozhelskaya — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/vlada-speaker.png" alt="Vlada Pogozhelskaya">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Vlada Pogozhelskaya</h3>
+                                        <p class="featured-speaker-meta">Software Developer</p>
+                                        <p class="featured-speaker-meta">Postgres Professional</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Vlada Pogozhelskaya</h3>
+                                    <p class="featured-speaker-bio">Vlada is a PostgreSQL core developer at Postgres Professional working on the query optimizer. Her focus is on improving the planner and execution strategies to make complex SQL queries faster and more predictable. She designs planner optimizations and studies database internals and algorithms behind query planning.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Dalto Curvelano" aria-label="Dalto Curvelano — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/dalto-speaker.png" alt="Dalto Curvelano">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Dalto Curvelano</h3>
+                                        <p class="featured-speaker-meta">Staff Software Engineer</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Dalto Curvelano</h3>
+                                    <p class="featured-speaker-bio">Dalto Curvelano Junior is a Senior Staff Software Engineer with over 10 years of experience building payment systems and fintech platforms in Brazil. He specializes in PostgreSQL performance optimization, system architecture, and database internals, having worked on high-scale transaction systems processing millions of users at companies like Sendwave/Zepz. He is passionate about making PostgreSQL expertise more accessible to application developers and building useful tooling for the global Postgres community.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Vik Fearing" aria-label="Vik Fearing — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/vik-speaker.png" alt="Vik Fearing">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Vik Fearing</h3>
+                                        <p class="featured-speaker-meta">SQL and PostgreSQL Expert</p>
+                                        <p class="featured-speaker-meta">Uniphant</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Vik Fearing</h3>
+                                    <div class="featured-speaker-bio">
+                                        <p>Vik Fearing is a PostgreSQL expert and lives in France.</p>
+                                        <p>He has been in the PostgreSQL community since 2008 and is the founder and co-organizer of pgDay Paris, co-organizer of PostgreSQL Conference Europe, and a volunteer and speaker at many other conferences around the world.</p>
+                                        <p>He is also a moderator for several of the PostgreSQL mailing lists as well as an IRC channel operator for #postgresql and #postgresql-fr.</p>
+                                        <p>He is an inaugural member of the PostgreSQL Code of Conduct Committee and part of the team behind the @PostgreSQL Twitter account. In his spare time, he likes to write minor patches to the PostgreSQL codebase.</p>
+                                        <p>A member of the SQL Committee since 2022, he is an official editor of the SQL Standard.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Ruslan Senchukov" aria-label="Ruslan Senchukov — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/ruslan-speaker.png" alt="Ruslan Senchukov">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Ruslan Senchukov</h3>
+                                        <p class="featured-speaker-meta">Program Manager</p>
+                                        <p class="featured-speaker-meta">MindWise</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Ruslan Senchukov</h3>
+                                    <p class="featured-speaker-bio">Ruslan Senchukov is a Project Manager at Mindwise, where he leads cross-functional teams in delivering high-impact digital solutions. He is currently driving O_project, focusing on aligning product vision with execution and ensuring measurable business outcomes. Ruslan combines strategic thinking with hands-on coordination, bridging communication between stakeholders, developers, and clients. With a strong results-oriented mindset, he emphasizes clarity, accountability, and continuous improvement across every stage of the project lifecycle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Alicja Kucharczyk" aria-label="Alicja Kucharczyk — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/alicja-speaker.png" alt="Alicja Kucharczyk">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Alicja Kucharczyk</h3>
+                                        <p class="featured-speaker-meta">PostgreSQL Consulting Lead</p>
+                                        <p class="featured-speaker-meta">Clouds on Mars</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Alicja Kucharczyk</h3>
+                                    <p class="featured-speaker-bio">Alicja Kucharczyk is a Consulting Lead at Clouds on Mars, delivering PostgreSQL consulting to customers all around the globe. She helps teams design, deploy, and operate reliable PostgreSQL platforms, with a strong focus on performance optimization and production troubleshooting across the stack - from SQL and database internals to infrastructure and workload behavior. With a practical, hands-on approach, she translates database internals into actionable changes that make systems faster and more reliable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="meet-host-card featured-speaker-card">
+                        <div class="featured-speaker-flip" tabindex="0" role="button" aria-expanded="false" data-speaker-name="Bruce Momjian" aria-label="Bruce Momjian — show bio">
+                            <div class="featured-speaker-flip-inner">
+                                <div class="featured-speaker-face featured-speaker-face--front">
+                                    <img class="meet-host-card-thumb" src="assets/bruce-speaker.png" alt="Bruce Momjian">
+                                    <div class="meet-host-card-body">
+                                        <h3 class="meet-host-card-title">Bruce Momjian</h3>
+                                        <p class="featured-speaker-meta">Vice President and Postgres Evangelist</p>
+                                        <p class="featured-speaker-meta">EDB</p>
+                                    </div>
+                                </div>
+                                <div class="featured-speaker-face featured-speaker-face--back" aria-hidden="true">
+                                    <h3 class="meet-host-card-title">Bruce Momjian</h3>
+                                    <p class="featured-speaker-bio">Bruce Momjian is co-founder and core team member of the PostgreSQL Global Development Group, and has worked on PostgreSQL since 1996. He has been employed by EDB since 2006. He has spoken at many international open-source conferences and is the author of PostgreSQL: Introduction and Concepts, published by Addison-Wesley. Prior to his involvement with PostgreSQL, Bruce worked as a consultant, developing custom database applications for some of the world's largest law firms. As an academic, Bruce holds a Masters in Education, an honorary doctorate, was a high school computer science teacher, and lectures internationally.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-your-ticket" class="section">
+            <div class="container">
+                <h2 class="section-display-title">Get Your Ticket!</h2>
+                <p class="ticket-section-tagline">Early Bird sells out fast!</p>
+                <div class="ticket-cards">
+                    <article class="ticket-card">
+                        <h3 class="ticket-card-title">Early Bird Student Ticket</h3>
+                        <p class="ticket-card-text">Discounted early rate for students. Please bring your student ID.</p>
+                        <p class="ticket-card-price">$20</p>
+                        <ul class="ticket-card-list">
+                            <li>Full-day access to all conference sessions, including the keynote, talks, sponsored live demo session, 50-minute sessions, networking and booth area</li>
+                            <li>Breakfast, lunch, afternoon break, and social event included</li>
+                            <li>Access to hiring and job opportunities</li>
+                            <li>Stickers and branded swag</li>
+                            <li>Community vibes &amp; memories</li>
+                        </ul>
+                        <button type="button" class="button primary ticket-card-button">Register Tomorrow</button>
+                    </article>
+                    <article class="ticket-card">
+                        <h3 class="ticket-card-title">Early Bird Individual Ticket</h3>
+                        <p class="ticket-card-text">Discounted early rate for individual attendees.</p>
+                        <p class="ticket-card-price">$40</p>
+                        <ul class="ticket-card-list">
+                            <li>Full-day access to all conference sessions, including the keynote, talks, sponsored live demo session, 50-minute sessions, networking and booth area</li>
+                            <li>Breakfast, lunch, afternoon break, and social event included</li>
+                            <li>Access to hiring and job opportunities</li>
+                            <li>Stickers and branded swag</li>
+                            <li>Community vibes &amp; memories</li>
+                        </ul>
+                        <button type="button" class="button primary ticket-card-button">Register Tomorrow</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsor" class="section alt">
+            <div class="container">
+                <div class="sponsor-intro">
+                    <h2 class="section-display-title">Sponsors</h2>
+                    <p class="sponsor-intro-lede">We’re proud to partner with you. Sponsorships are open, if you’d like to explore options, <a class="sponsor-intro-link" href="assets/pgday-prospectus.pdf?v=20260413" target="_blank" rel="noopener noreferrer">download the Event Prospectus</a>. Get in touch with us at <a class="sponsor-email" href="mailto:pgdayarmenia@gmail.com">pgdayarmenia@gmail.com</a> and we’ll walk you through the process.</p>
+                    <article class="meet-host-card sponsor-intro-card" aria-label="Our Platinum and Gold sponsors">
+                        <p class="sponsor-intro-tier-label">Our Platinum Sponsor</p>
+                        <div class="sponsor-logo-row sponsor-logo-row--featured" aria-label="Platinum sponsor logo">
+                            <a class="sponsor-aws-site" href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer" aria-label="Amazon Web Services — opens in a new tab">
+                                <img class="sponsor-logo sponsor-logo--aws" src="assets/aws-logo.svg" alt="">
+                            </a>
+                        </div>
+                        <p class="sponsor-intro-tier-label sponsor-intro-tier-label--secondary">Our Gold Sponsor</p>
+                        <div class="sponsor-logo-row sponsor-logo-row--featured sponsor-logo-row--gold" aria-label="Gold sponsor logo">
+                            <a class="sponsor-jetbrains-site" href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer" aria-label="JetBrains — opens in a new tab">
+                                <img class="sponsor-logo sponsor-logo--jetbrains" src="assets/jetbrains-logo.svg" alt="">
+                            </a>
+                        </div>
+                        <p class="sponsor-intro-more">More sponsors to be announced!</p>
+                    </article>
                 </div>
                 <div class="sponsor-cards">
                     <div class="info-card sponsor-tier">
@@ -259,11 +725,11 @@
                             <li>Sponsored Lanyards / Badges</li>
                             <li>Speaker Gifts</li>
                             <li>Participant Swag</li>
-                            <li>Livestream &amp; Video Recordings</li>
-                            <li>Social Networking Event</li>
+                            <li>Video Recordings</li>
+                            <li>Social Event</li>
                         </ul>
-                        <p>Explore full details in our Sponsorship Prospectus or for sponsorship inquiries, contact us at <a href="mailto:pgdayarmenia@gmail.com">pgdayarmenia@gmail.com</a>.</p>
-                        <p class="sponsor-prospectus"><a href="assets/pgday-prospectus.pdf" target="_blank" rel="noopener noreferrer">Download Event Prospectus</a></p>
+                        <p>Explore full details in our Sponsorship Prospectus or for sponsorship inquiries, contact us at <a class="sponsor-email" href="mailto:pgdayarmenia@gmail.com">pgdayarmenia@gmail.com</a>.</p>
+                        <p class="sponsor-prospectus"><a href="assets/pgday-prospectus.pdf?v=20260413" target="_blank" rel="noopener noreferrer">Download Event Prospectus</a></p>
                     </div>
                 </div>
                 <div class="info-card sponsor-note">
@@ -271,16 +737,6 @@
                         <p class="sponsor-thank">Thank You!</p>
                         <p>PGDay Armenia is organized entirely by volunteers. All proceeds from the conference are reinvested to support the local PostgreSQL community.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="attend" class="section">
-            <div class="container">
-                <h2>Conference Registration Opens Soon!</h2>
-                <div class="attend-description">
-                    <p>Are you a PostgreSQL enthusiast or just getting started with open source? Join software developers, database engineers, DBAs, system administrators, DevOps, platform and cloud engineers, data professionals, open source enthusiasts, as well as PostgreSQL community members and organizers from Armenia and beyond for a full day of talks, learning, and networking.</p>
-                    <p><a href="https://forms.gle/7hkZMR9SkR8VQr1R6" target="_blank" rel="noopener noreferrer">Pre-register today</a> to be the first to know when registration opens and to receive conference updates.</p>
                 </div>
             </div>
         </section>
@@ -304,17 +760,6 @@
             </div>
         </section>
 
-        <section id="register" class="section">
-            <div class="container">
-                <div class="partner-block">
-                    <div class="partner-group">
-                        <p class="partner-kicker">Organized by</p>
-                        <p class="partner-name">Armenia PostgreSQL User Group</p>
-                        <img class="partner-logo partner-logo--pg" src="assets/pg-armenia-logo.png" alt="Armenia PostgreSQL User Group logo">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <section id="contact" class="contact-strip">
@@ -334,34 +779,67 @@
 
     <footer class="site-footer">
         <div class="container footer-content">
-            <div class="footer-org">
-                <span class="footer-social-heading">Organized by:</span>
-                <span class="footer-org-name">Armenia PostgreSQL User Group</span>
-                <div class="footer-social footer-social-inline">
-                    <span class="footer-social-heading follow-us-heading">Follow Us:</span>
-                    <a class="meetup-icon" href="https://www.meetup.com/armenia-postgresql-user-group/?eventOrigin=home_groups_you_organize" target="_blank" rel="noopener noreferrer" aria-label="Meetup">
-                        <span class="meetup-mark" aria-hidden="true">m</span>
-                    </a>
-                    <a class="youtube-icon" href="https://www.youtube.com/@ArmeniaPostgreSQLUserGroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path d="M23.5 7.3a3 3 0 0 0-2.1-2.1C19.5 4.7 12 4.7 12 4.7s-7.5 0-9.4.5A3 3 0 0 0 .5 7.3C0 9.2 0 12 0 12s0 2.8.5 4.7a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.7.5-4.7s0-2.8-.5-4.7zM9.6 15.5V8.5l6.2 3.5-6.2 3.5z"/>
-                        </svg>
-                    </a>
-                    <a class="linkedin-icon" href="https://www.linkedin.com/company/armenia-postgresql-user-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg class="footer-linkedin-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path d="M20.45 20.45h-3.6v-5.5c0-1.31-.03-2.99-1.82-2.99-1.82 0-2.1 1.42-2.1 2.89v5.6H9.33V9h3.46v1.56h.05c.48-.9 1.66-1.85 3.42-1.85 3.65 0 4.32 2.4 4.32 5.51v6.23zM5.34 7.43a2.09 2.09 0 1 1 0-4.18 2.09 2.09 0 0 1 0 4.18zM7.14 20.45H3.54V9h3.6v11.45z"/>
-                        </svg>
-                    </a>
-                </div>
+            <span class="footer-social-heading footer-grid-organized">Organized by:</span>
+            <p class="footer-hashtag">#PGDayArmenia</p>
+            <span class="footer-org-name">Armenia PostgreSQL User Group</span>
+            <p class="footer-note">Join our community!</p>
+            <div class="footer-social footer-social-inline">
+                <span class="footer-social-heading follow-us-heading">Follow Us:</span>
+                <a class="meetup-icon" href="https://www.meetup.com/armenia-postgresql-user-group/?eventOrigin=home_groups_you_organize" target="_blank" rel="noopener noreferrer" aria-label="Meetup">
+                    <span class="meetup-mark" aria-hidden="true">m</span>
+                </a>
+                <a class="youtube-icon" href="https://www.youtube.com/@ArmeniaPostgreSQLUserGroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M23.5 7.3a3 3 0 0 0-2.1-2.1C19.5 4.7 12 4.7 12 4.7s-7.5 0-9.4.5A3 3 0 0 0 .5 7.3C0 9.2 0 12 0 12s0 2.8.5 4.7a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.7.5-4.7s0-2.8-.5-4.7zM9.6 15.5V8.5l6.2 3.5-6.2 3.5z"/>
+                    </svg>
+                </a>
+                <a class="linkedin-icon" href="https://www.linkedin.com/company/armenia-postgresql-user-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg class="footer-linkedin-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M20.45 20.45h-3.6v-5.5c0-1.31-.03-2.99-1.82-2.99-1.82 0-2.1 1.42-2.1 2.89v5.6H9.33V9h3.46v1.56h.05c.48-.9 1.66-1.85 3.42-1.85 3.65 0 4.32 2.4 4.32 5.51v6.23zM5.34 7.43a2.09 2.09 0 1 1 0-4.18 2.09 2.09 0 0 1 0 4.18zM7.14 20.45H3.54V9h3.6v11.45z"/>
+                    </svg>
+                </a>
             </div>
-            <div class="footer-brand">
-                <p class="footer-hashtag">#PGDayArmenia</p>
-                <p class="footer-note">Subscribe to our newsletter. Stay tuned!</p>
-                <a class="footer-button" href="https://forms.gle/7hkZMR9SkR8VQr1R6" target="_blank" rel="noopener noreferrer">Subscribe</a>
-                <a class="footer-link" href="https://www.postgresql.org/about/policies/coc/" target="_blank" rel="noopener noreferrer">Code of Conduct</a>
-            </div>
+            <a class="footer-link" href="https://www.postgresql.org/about/policies/coc/" target="_blank" rel="noopener noreferrer">Code of Conduct</a>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            document.querySelectorAll('.featured-speaker-flip').forEach(function (el) {
+                function toggle() {
+                    var card = el.closest('.featured-speaker-card');
+                    if (!card) return;
+                    var flipped = card.classList.toggle('is-flipped');
+                    el.setAttribute('aria-expanded', flipped ? 'true' : 'false');
+                    var name = el.getAttribute('data-speaker-name') || '';
+                    el.setAttribute('aria-label', name + (flipped ? ' — hide bio' : ' — show bio'));
+                    var front = card.querySelector('.featured-speaker-face--front');
+                    var back = card.querySelector('.featured-speaker-face--back');
+                    if (front && back) {
+                        front.setAttribute('aria-hidden', flipped ? 'true' : 'false');
+                        back.setAttribute('aria-hidden', flipped ? 'false' : 'true');
+                    }
+                }
+                el.addEventListener('click', function (e) {
+                    var n = e.target;
+                    while (n && n !== el) {
+                        if (n.tagName === 'A' && n.getAttribute('href')) {
+                            return;
+                        }
+                        n = n.parentElement;
+                    }
+                    e.preventDefault();
+                    toggle();
+                });
+                el.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggle();
+                    }
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
 

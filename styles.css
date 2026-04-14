@@ -16,13 +16,14 @@
 }
 
 body {
-    font-family: "Futura", "Futura PT", "Avenir Next", "Space Mono", sans-serif;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: var(--text);
     background-color: var(--light);
 }
 
 html {
     -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 80px;
 }
 
 img {
@@ -31,63 +32,94 @@ img {
 }
 
 .site-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: transparent;
-    z-index: 10;
+    z-index: 1000;
+    padding: 0 clamp(16px, 4vw, 28px);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
 }
 
 .nav {
-    max-width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 18px 0;
+    min-height: 70px;
+    padding: 12px 0;
     display: flex;
     align-items: center;
-    gap: 24px;
-    color: #ffffff;
+    gap: clamp(12px, 2vw, 24px);
+    color: #0f172a;
 }
 
 .nav-brand {
     font-weight: 700;
-    font-family: "Futura", "Futura PT", "Avenir Next", "Space Mono", sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: clamp(17px, 2.1vw, 22px);
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-left: 0;
-    line-height: 1.1;
+    line-height: 1.15;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.45em;
+    color: #0f172a;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 4px;
     margin-left: auto;
-    margin-right: 12px;
+    margin-right: 0;
+    justify-content: flex-end;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #334155;
     text-decoration: none;
-    font-size: 14px;
-    opacity: 0.9;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.nav-cta {
-    background: #1f6feb;
-    color: #ffffff;
-    padding: 8px 18px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-size: 13px;
+.nav-links a:hover {
+    color: #0f172a;
+    background-color: rgba(15, 23, 42, 0.06);
+}
+
+.nav-links a.nav-ticket,
+.nav-links span.nav-ticket {
+    background: #e8efff;
+    border: 2px solid #c6d4f0;
+    border-radius: 16px;
+    color: #0b1434;
+    font-weight: 600;
+    padding: 8px 16px;
+}
+
+.nav-links a.nav-ticket:hover,
+.nav-links span.nav-ticket:hover {
+    color: #0b1434;
+    background: #dce8ff;
+    border-color: #b6c8ec;
 }
 
 .hero {
     background: var(--navy);
     color: #ffffff;
     padding: 0;
+    padding-top: 72px;
     border-bottom: 4px solid #e6e6e6;
     position: relative;
     overflow: hidden;
@@ -188,18 +220,19 @@ img {
     background: #f5f7fb;
 }
 
-#sponsor.section,
-#speak.section {
+#sponsor.section {
     background: #f5f7fb;
 }
 
-#speak h2 {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+#featured-speakers.section {
+    background: var(--navy);
+    color: #ffffff;
 }
 
-#about h2,
+#featured-speakers h2.section-display-title {
+    color: #ffffff;
+}
+
 #organizers h2 {
     text-align: center;
 }
@@ -208,16 +241,792 @@ img {
     text-align: center;
 }
 
-#attend h2 {
-    text-align: center;
-}
-
 #sponsor h2 {
     text-align: center;
 }
 
-#register.section {
-    background: #f5f7fb;
+#get-your-ticket {
+    text-align: center;
+    background: var(--elephant-blue);
+    color: #ffffff;
+}
+
+#get-your-ticket .section-display-title {
+    color: #ffffff;
+}
+
+#get-your-ticket .ticket-section-tagline {
+    margin: 14px 0 0;
+    font-size: clamp(0.95rem, 1.65vw, 1.1rem);
+    font-weight: 600;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+#get-your-ticket .ticket-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(16px, 3vw, 28px);
+    max-width: 760px;
+    margin: 28px auto 0;
+    text-align: left;
+}
+
+#get-your-ticket .ticket-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px 22px;
+    border: 1px solid #e2e7f1;
+    box-shadow: 0 6px 20px rgba(9, 18, 52, 0.1);
+}
+
+#get-your-ticket .ticket-card-title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0b1434;
+}
+
+#get-your-ticket .ticket-card-price {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--elephant-blue);
+}
+
+#get-your-ticket .ticket-card-list {
+    margin: 0 0 20px;
+    padding-left: 1.25em;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #334155;
+    text-align: left;
+}
+
+#get-your-ticket .ticket-card-list li {
+    margin: 0 0 6px;
+}
+
+#get-your-ticket .ticket-card-list li:last-child {
+    margin-bottom: 0;
+}
+
+#get-your-ticket .ticket-card-text {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #334155;
+}
+
+#get-your-ticket .ticket-card-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: center;
+    border-radius: 999px;
+    border: none;
+    cursor: default;
+}
+
+@media (max-width: 640px) {
+    #get-your-ticket .ticket-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sponsor-intro {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.section h2.section-display-title {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #0b1434;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#schedule .schedule-date-card {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 14px auto 20px;
+    padding: 14px 32px;
+    background: #ffffff;
+    border: 1px solid #e2e7f1;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(9, 18, 52, 0.08);
+    text-align: center;
+}
+
+#schedule .schedule-date-card time {
+    font-size: clamp(17px, 2.2vw, 21px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--elephant-blue);
+}
+
+#schedule .meet-host-card.schedule-content-card {
+    margin: 0 auto 0;
+    max-width: 800px;
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #e2e7f1;
+    box-shadow: 0 8px 24px rgba(9, 18, 52, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#schedule .schedule-content-card-body--timeline {
+    margin-top: 0;
+    padding: 8px 0 0;
+    text-align: left;
+}
+
+#schedule .schedule-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+#schedule .schedule-row {
+    display: grid;
+    grid-template-columns: minmax(110px, 1fr) minmax(0, 2.2fr);
+    gap: 12px 12px;
+    padding: 16px 24px 16px 20px;
+    border-bottom: 1px solid #e8ecf4;
+    align-items: start;
+}
+
+#schedule .schedule-session:has(.schedule-avatar) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#schedule .schedule-session-head {
+    line-height: 1.45;
+}
+
+#schedule .schedule-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #e8ecf4;
+}
+
+#schedule .schedule-avatar-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#schedule .schedule-session-avatar-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+}
+
+#schedule .schedule-speaker-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#schedule .schedule-speaker-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0b1434;
+    margin: 0;
+    line-height: 1.35;
+}
+
+#schedule .schedule-speaker-meta {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #6b7280;
+    margin: 0;
+}
+
+#schedule .schedule-row:last-child {
+    border-bottom: none;
+}
+
+#schedule .schedule-row--lead {
+    background: #f8fafc;
+}
+
+#schedule .schedule-row--keynote {
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background: linear-gradient(105deg, rgba(30, 107, 241, 0.09) 0%, rgba(255, 255, 255, 0.97) 52%, #ffffff 100%);
+    border-bottom: 1px solid #e2e7f1;
+    box-shadow: inset 4px 0 0 var(--elephant-blue);
+}
+
+#schedule .schedule-row--keynote .schedule-session {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#schedule .schedule-keynote-label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--elephant-blue);
+}
+
+#schedule .schedule-title--keynote {
+    font-size: clamp(1.125rem, 2.4vw, 1.35rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: #0b1434;
+}
+
+#schedule .schedule-row--keynote .schedule-time {
+    font-size: 16px;
+}
+
+#schedule .schedule-expand-details {
+    border-bottom: 1px solid #e8ecf4;
+}
+
+#schedule .schedule-expand-details summary.schedule-row {
+    display: grid;
+    border-bottom: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+#schedule .schedule-expand-details summary.schedule-row::-webkit-details-marker {
+    display: none;
+}
+
+#schedule .schedule-expand-details summary.schedule-row:focus-visible {
+    outline: 2px solid var(--elephant-blue);
+    outline-offset: 2px;
+}
+
+#schedule .schedule-expand-details[open] summary.schedule-row {
+    padding-bottom: 0;
+}
+
+#schedule .schedule-expand-description {
+    margin: 10px 0 0;
+    padding: 14px 24px;
+    border-left: 4px solid rgba(30, 107, 241, 0.35);
+    background: rgba(248, 250, 252, 0.92);
+}
+
+#schedule .schedule-expand-details--speaker .schedule-expand-description {
+    padding-left: calc(20px + 120px + 12px + 24px);
+}
+
+#schedule .schedule-expand-description p {
+    margin: 0;
+    max-width: 65ch;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #334155;
+}
+
+#schedule .schedule-expand-description p + p {
+    margin-top: 0.85em;
+}
+
+#schedule .schedule-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    justify-self: start;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--elephant-blue);
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+}
+
+#schedule .schedule-time .schedule-meta {
+    margin-left: 0;
+    align-self: flex-start;
+}
+
+#schedule .schedule-session {
+    font-size: 17px;
+    line-height: 1.45;
+    color: #0b1434;
+}
+
+#schedule .schedule-title {
+    font-weight: 600;
+}
+
+#schedule .schedule-meta {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--elephant-blue);
+    background: rgba(30, 107, 241, 0.1);
+    border: 1px solid rgba(30, 107, 241, 0.28);
+    border-radius: 9999px;
+    vertical-align: middle;
+}
+
+#schedule .schedule-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #475569;
+    background: #f1f5f9;
+    border-radius: 6px;
+    vertical-align: middle;
+}
+
+#schedule .schedule-badge--sponsor {
+    color: var(--accent-dark);
+    background: #e8efff;
+}
+
+#schedule .schedule-row--break {
+    background: #f8fafc;
+}
+
+#schedule .schedule-row--break.schedule-row--break-navy {
+    align-items: center;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#schedule .schedule-row--break-navy .schedule-time {
+    color: #ffffff;
+}
+
+#schedule .schedule-row--break-navy .schedule-session {
+    color: #ffffff;
+}
+
+#schedule .schedule-row--break-navy .schedule-meta {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+#schedule .schedule-row--highlight {
+    background: linear-gradient(90deg, rgba(30, 107, 241, 0.06) 0%, rgba(255, 255, 255, 0) 55%);
+}
+
+#schedule .schedule-row--closing {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#schedule .schedule-row--interstitial {
+    grid-template-columns: 1fr;
+    padding: 8px 24px 10px 20px;
+    text-align: center;
+    border-bottom: 1px dashed #e2e7f1;
+    background: #fafbfc;
+}
+
+#schedule .schedule-interstitial {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--elephant-blue);
+    background: rgba(30, 107, 241, 0.1);
+    border: 1px solid rgba(30, 107, 241, 0.28);
+    border-radius: 9999px;
+}
+
+@media (max-width: 640px) {
+    #schedule .schedule-row:not(.schedule-row--interstitial) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "time"
+            "session";
+        gap: 8px 0;
+        padding: 14px 20px;
+    }
+
+    #schedule .schedule-time {
+        grid-area: time;
+    }
+
+    #schedule .schedule-session {
+        grid-area: session;
+    }
+
+    #schedule .schedule-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    #schedule .schedule-row--interstitial {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #schedule .schedule-expand-description {
+        margin-top: 10px;
+        padding: 14px 20px;
+    }
+
+    #schedule .schedule-expand-details--speaker .schedule-expand-description {
+        padding-left: 20px;
+    }
+}
+
+#featured-speakers .featured-speakers-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 28px);
+    align-items: stretch;
+}
+
+#featured-speakers .featured-speaker-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+    background: #ffffff;
+    padding: 0;
+    overflow: hidden;
+    perspective: 1000px;
+    perspective-origin: center center;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+#featured-speakers .featured-speaker-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(9, 18, 52, 0.14);
+    border-color: rgba(30, 107, 241, 0.45);
+}
+
+#featured-speakers .featured-speaker-flip {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#featured-speakers .featured-speaker-flip:focus-visible {
+    box-shadow: inset 0 0 0 3px var(--elephant-blue);
+    border-radius: 16px;
+}
+
+#featured-speakers .featured-speaker-flip-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#featured-speakers .featured-speaker-card.is-flipped .featured-speaker-flip-inner {
+    transform: rotateY(180deg);
+}
+
+#featured-speakers .featured-speaker-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 24px 22px 22px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+#featured-speakers .featured-speaker-face--front {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    min-height: 0;
+}
+
+#featured-speakers .featured-speaker-face--front .meet-host-card-body {
+    text-align: center;
+}
+
+#featured-speakers .featured-speaker-meta {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #6b7280;
+    margin: 0;
+    text-align: center;
+}
+
+#featured-speakers .featured-speaker-face--front .meet-host-card-title {
+    margin-bottom: 0;
+}
+
+#featured-speakers .meet-host-card-title + .featured-speaker-meta {
+    margin-top: 18px;
+}
+
+#featured-speakers .meet-host-card-title + .meet-host-card-text {
+    margin-top: 8px;
+}
+
+#featured-speakers .featured-speaker-meta + .featured-speaker-meta {
+    margin-top: 8px;
+}
+
+#featured-speakers .featured-speaker-face--front .meet-host-card-thumb {
+    margin: 0 auto 20px;
+    transition: box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+#featured-speakers .featured-speaker-card:not(.is-flipped):hover .featured-speaker-face--front .meet-host-card-thumb {
+    box-shadow: 0 0 0 3px rgba(30, 107, 241, 0.35);
+    border-color: rgba(30, 107, 241, 0.35);
+}
+
+#featured-speakers .featured-speaker-face--back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+    overflow-y: auto;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: none;
+}
+
+#featured-speakers .featured-speaker-card.is-flipped .featured-speaker-face--back {
+    pointer-events: auto;
+}
+
+#featured-speakers .featured-speaker-card.is-flipped .featured-speaker-face--front {
+    pointer-events: none;
+}
+
+#featured-speakers .featured-speaker-face--back .meet-host-card-title {
+    margin-bottom: 12px;
+}
+
+#featured-speakers .featured-speaker-bio {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #1a2140;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+#featured-speakers .featured-speaker-bio > p {
+    margin: 0 0 12px;
+}
+
+#featured-speakers .featured-speaker-bio > p:last-child {
+    margin-bottom: 0;
+}
+
+#featured-speakers .featured-speaker-bio a {
+    color: var(--elephant-blue);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-word;
+}
+
+#featured-speakers .featured-speaker-bio a:hover {
+    color: var(--accent-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #featured-speakers .featured-speaker-flip-inner {
+        transition: transform 0.25s ease;
+    }
+
+    #featured-speakers .featured-speaker-card {
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    #featured-speakers .featured-speaker-card:hover {
+        transform: none;
+    }
+}
+
+.sponsor-intro-lede {
+    margin: 14px auto 0;
+    max-width: 640px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1a2140;
+}
+
+.sponsor-intro-lede .sponsor-intro-link {
+    color: var(--elephant-blue);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.sponsor-intro-lede .sponsor-intro-link:hover {
+    color: var(--accent-dark);
+}
+
+.sponsor-intro .meet-host-card.sponsor-intro-card {
+    --sponsor-platinum-logo-max: 340px;
+
+    margin: 28px auto 0;
+    max-width: 720px;
+    padding: 28px 28px 52px;
+    background: #ffffff;
+    border: 1px solid #e2e7f1;
+    box-shadow: 0 8px 24px rgba(9, 18, 52, 0.08);
+}
+
+.sponsor-intro-tier-label {
+    margin: 0 0 48px;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--elephant-blue);
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sponsor-intro-tier-label--secondary {
+    margin: 80px 0 44px;
+}
+
+.sponsor-intro-card .sponsor-logo-row {
+    margin-top: 0;
+}
+
+.sponsor-intro-card .sponsor-logo-row--featured {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.sponsor-aws-site {
+    display: inline-block;
+    line-height: 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.sponsor-aws-site:hover .sponsor-logo--aws {
+    opacity: 0.92;
+}
+
+.sponsor-aws-site:focus-visible {
+    outline: 2px solid var(--elephant-blue);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.sponsor-intro-card .sponsor-logo--aws {
+    max-height: none;
+    height: auto;
+    width: min(var(--sponsor-platinum-logo-max), 100%);
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.sponsor-jetbrains-site {
+    display: inline-block;
+    line-height: 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.sponsor-jetbrains-site:hover .sponsor-logo--jetbrains {
+    opacity: 0.92;
+}
+
+.sponsor-jetbrains-site:focus-visible {
+    outline: 2px solid var(--elephant-blue);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.sponsor-intro-card .sponsor-logo--jetbrains {
+    display: block;
+    width: min(calc(var(--sponsor-platinum-logo-max) * 1.22), 100%);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.sponsor-intro-more {
+    margin: 68px 0 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--elephant-blue);
+    text-align: center;
+    line-height: 1.45;
+}
+
+.sponsor-logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+    margin-top: 28px;
+}
+
+.sponsor-logo {
+    display: block;
+    width: auto;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+.sponsor-logo--aws {
+    max-height: 56px;
+    max-width: min(200px, 48vw);
 }
 
 .container {
@@ -226,13 +1035,16 @@ img {
 }
 
 .welcome h1 {
-    font-size: 32px;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: #0b1434;
     margin-bottom: 24px;
 }
 
 .event-meta {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 8px;
 }
 
@@ -242,12 +1054,17 @@ img {
     border: 2px solid #c6d4f0;
     border-radius: 16px;
     padding: 16px 20px;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     text-align: center;
 }
 
 .event-meta-card .event-meta {
     margin: 0;
+    font-weight: 600;
+    color: #0b1434;
 }
 
 .event-meta {
@@ -255,7 +1072,7 @@ img {
 }
 
 .event-tagline {
-    margin-top: 14px;
+    margin-top: 32px;
     font-size: 32px;
     font-weight: 700;
     color: #0b1434;
@@ -263,6 +1080,14 @@ img {
 
 .tagline-highlight {
     color: var(--elephant-blue);
+}
+
+.event-connect-tagline {
+    margin-top: 26px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
 }
 
 .event-description {
@@ -280,12 +1105,6 @@ img {
 }
 
 
-.event-note {
-    margin-top: 26px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
 .cta-row {
     margin-top: 32px;
     display: flex;
@@ -295,6 +1114,7 @@ img {
 }
 
 .button {
+    display: inline-block;
     text-decoration: none;
     padding: 12px 30px;
     border-radius: 999px;
@@ -312,13 +1132,15 @@ img {
     color: #ffffff;
 }
 
+.button.button-cta-ticket {
+    padding: 16px 44px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .section {
     padding: 64px 24px;
     background: #ffffff;
-}
-
-#about.section {
-    background: #e8efff;
 }
 
 .section.alt {
@@ -330,11 +1152,16 @@ img {
     font-size: 28px;
 }
 
-.section h2.section-title,
-.section h2.highlight-blue {
+.section h2.section-title {
     font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
+.section-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
 
 .venue-section {
     display: grid;
@@ -372,11 +1199,6 @@ img {
     width: 100%;
     border-radius: 16px;
     display: block;
-}
-
-.section-title {
-    margin-bottom: 12px;
-    font-size: 28px;
 }
 
 .highlight-blue {
@@ -420,6 +1242,66 @@ img {
     letter-spacing: 0.6px;
     text-transform: uppercase;
     color: #4b5675;
+}
+
+.meet-host-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 4vw, 32px);
+    align-items: stretch;
+}
+
+.meet-host-card {
+    background: #f5f7fb;
+    border: 1px solid #e2e7f1;
+    border-radius: 16px;
+    padding: 24px 22px 22px;
+    box-shadow: 0 8px 24px rgba(9, 18, 52, 0.08);
+}
+
+.meet-host-card-thumb {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e2e7f1;
+    display: block;
+    margin: 0 auto 20px;
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.meet-host-card-body {
+    text-align: left;
+}
+
+.meet-host-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b1434;
+    margin: 0 0 8px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.meet-host-card-subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--elephant-blue);
+    margin: 0 0 16px;
+    text-align: center;
+}
+
+.meet-host-card-text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #1a2140;
+    margin: 0;
+}
+
+.meet-host-card-text + .meet-host-card-text {
+    margin-top: 12px;
 }
 
 .dates-cards {
@@ -579,17 +1461,6 @@ img {
     width: 100%;
 }
 
-.attend-description {
-    margin-top: 18px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #1a2140;
-}
-
-.attend-description p + p {
-    margin-top: 14px;
-}
-
 .organizers-grid {
     display: flex;
     justify-content: center;
@@ -651,8 +1522,14 @@ img {
 }
 
 .sponsor-email {
-    color: #0b1434;
-    text-decoration: none;
+    color: var(--elephant-blue);
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.sponsor-email:hover {
+    color: var(--accent-dark);
 }
 
 .sponsor-actions a:hover {
@@ -665,64 +1542,6 @@ img {
     font-weight: 400;
     color: #1a2140;
     overflow-wrap: anywhere;
-}
-
-.partner-block {
-    margin-top: 32px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    align-items: start;
-}
-
-.partner-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #0b1434;
-    margin-bottom: 12px;
-}
-
-.partner-logo {
-    width: 180px;
-    height: 180px;
-    display: inline-block;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #e2e7f1;
-}
-
-.partner-logo--pg {
-    width: 180px;
-    height: 180px;
-}
-
-.partner-name {
-    margin-top: 12px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #0b1434;
-    overflow-wrap: anywhere;
-}
-
-.partner-kicker {
-    font-size: 18px;
-    font-weight: 600;
-    color: #0b1434;
-    overflow-wrap: anywhere;
-}
-
-.partner-group .partner-name {
-    margin-top: 8px;
-}
-
-.partner-group .partner-logo {
-    margin-top: 12px;
-}
-
-.partner-link {
-    margin-top: 12px;
-    display: inline-flex;
 }
 
 .organizer-link {
@@ -793,16 +1612,47 @@ img {
 }
 
 .contact-email a {
-    color: #0b1434;
-    text-decoration: none;
-    font-weight: 600;
+    color: var(--elephant-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 400;
+}
+
+.contact-email a:hover {
+    color: var(--accent-dark);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: 32px;
+    grid-template-areas:
+        "org-label brand-tag"
+        "org-name join-note"
+        "social coc";
+    gap: 6px 32px;
     align-items: start;
+}
+
+.footer-grid-organized {
+    grid-area: org-label;
+}
+
+.footer-content > .footer-social {
+    grid-area: social;
+    margin-top: 12px;
+    align-self: center;
+    justify-self: start;
+}
+
+.footer-content > .footer-link {
+    grid-area: coc;
+    margin-top: 12px;
+    align-self: center;
+    justify-self: start;
+}
+
+.footer-content .follow-us-heading {
+    top: 0;
 }
 
 .footer-social {
@@ -825,36 +1675,31 @@ img {
     color: var(--elephant-blue);
 }
 
-.footer-org {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
 .footer-org-name {
+    grid-area: org-name;
     font-size: 18px;
     color: #ffffff;
     opacity: 0.9;
     overflow-wrap: anywhere;
+    line-height: 1.45;
 }
 
 .footer-social-inline {
-    margin-top: 12px;
     flex-wrap: nowrap;
     white-space: nowrap;
 }
 
-.footer-org .footer-social a {
+.footer-content .footer-social a {
     width: 48px;
     height: 48px;
 }
 
-.footer-org .footer-social svg {
+.footer-content .footer-social svg {
     width: 24px;
     height: 24px;
 }
 
-.footer-org .meetup-mark {
+.footer-content .meetup-mark {
     font-size: 40px;
 }
 
@@ -910,15 +1755,20 @@ img {
 }
 
 .footer-hashtag {
+    grid-area: brand-tag;
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin: 0;
     color: #ffffff;
 }
 
 .footer-note {
-    font-size: 20px;
-    opacity: 0.85;
+    grid-area: join-note;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
 .footer-form {
@@ -927,20 +1777,9 @@ img {
     flex-wrap: wrap;
 }
 
-.footer-button {
-    padding: 10px 20px;
-    border-radius: 999px;
-    background: #1e6bf1;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 14px;
-    display: inline-flex;
-}
-
 .footer-link {
     display: inline-flex;
-    margin-top: 12px;
+    align-items: center;
     color: #ffffff;
     text-decoration: none;
     opacity: 0.85;
@@ -971,6 +1810,13 @@ img {
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "org-label"
+            "brand-tag"
+            "org-name"
+            "join-note"
+            "social"
+            "coc";
     }
 
     .footer-form {
@@ -981,17 +1827,21 @@ img {
 @media (max-width: 900px) {
     .nav {
         flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    .nav-brand {
+        width: 100%;
+        text-align: center;
+        align-items: center;
     }
 
     .nav-links {
         width: 100%;
         justify-content: center;
-        margin: 12px 0 0;
+        margin: 0;
         flex-wrap: wrap;
-    }
-
-    .nav-cta {
-        margin-left: auto;
     }
 
     .hero-grid {
@@ -1027,30 +1877,41 @@ img {
     .committee-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    #featured-speakers .featured-speakers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .meet-host-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 14px 16px;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 0;
     }
 
     .nav-brand {
-        font-size: 14px;
-        letter-spacing: 0.8px;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        align-self: center;
+        text-align: center;
     }
 
     .nav-links {
         width: 100%;
-        justify-content: flex-start;
-        gap: 16px;
+        justify-content: center;
+        gap: 4px 8px;
         margin: 0;
     }
 
-    .nav-cta {
-        align-self: flex-start;
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 10px;
     }
 
     .hero-banner {
@@ -1062,9 +1923,8 @@ img {
         padding: 48px 20px 64px;
     }
 
-    .event-meta,
-    .event-note {
-        font-size: 16px;
+    .event-meta {
+        font-size: 18px;
     }
 
     .button {
@@ -1090,7 +1950,7 @@ img {
     }
 
     .welcome h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .cta-row {
@@ -1126,6 +1986,10 @@ img {
     .committee-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
+    }
+
+    #featured-speakers .featured-speakers-grid {
+        grid-template-columns: 1fr;
     }
 
     .committee-top .organizer-card img,
