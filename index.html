@@ -186,6 +186,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>Amazon has a long history with PostgreSQL, whether it be internal company adoption or the many AWS services built around it. In this session, Robert Treat looks back across Amazon's journey with PostgreSQL, from its large-scale migration from Oracle to the creation of Amazon RDS for PostgreSQL. He will also look at how Amazon is making use of PostgreSQL today through current offerings such as Amazon Aurora for PostgreSQL and Amazon Aurora DSQL. We will conclude our conversation with a look at how AWS is working with the PostgreSQL community to address new and emerging database challenges.</p>
@@ -207,6 +208,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>Production database crashes can be difficult to investigate, especially when they occur under real workloads or involve custom extensions. This talk walks through a practical workflow for diagnosing PostgreSQL crashes using core dumps and GDB. We'll cover how to configure systems to capture useful crash data and how to reproduce and analyze failures locally. The session demonstrates how to inspect stack traces, examine memory, and identify the root cause of a crash. Special attention will be given to issues that arise in early-stage PostgreSQL extensions written in C or Rust. By the end, attendees will understand how to turn a production crash into actionable debugging information.</p>
@@ -232,6 +234,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>Have you ever wondered what exactly happens on the network when your application talks to PostgreSQL? In this session, we will dive deep into the Postgres Frontend/Backend protocol. We'll decode and document real-world message exchanges, and learn how to use Wireshark to capture and diagnose database communication issues. Whether you are doing support without the codebase, debugging stubborn performance bottlenecks, writing a custom driver, or simply curious about database internals, you will leave with a solid understanding of how Postgres communicates on the wire and the practical skills to troubleshoot it effectively.</p>
@@ -253,6 +256,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>PostgreSQL's query planner relies on selectivity and cardinality estimates to choose execution plans. When these estimates become unreliable, the planner may select plans that look inexpensive on paper but perform poorly in practice.</p>
@@ -275,6 +279,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>Most developers know that indexes make queries faster, but few understand why — or when they don't. This talk starts from the physical layer, showing how PostgreSQL stores data on disk as heap files divided into 8KB pages, and how indexes create efficient lookup paths to avoid full sequential scans. We'll walk through each of the six built-in index types (B-Tree, Hash, BRIN, GIN, GiST, and SP-GiST), explaining what problems each one solves and where each falls short. Attendees will learn the real costs of indexes: disk space, write overhead, memory pressure, and query planner complexity. We'll cover practical techniques like partial indexes, covering indexes, expression indexes, and multi-column index design, with live EXPLAIN ANALYZE output showing the performance impact of each. The talk also covers PostgreSQL 18's new skip scan optimization and how it changes the rules for composite index design. You'll leave with a clear mental model for choosing the right index type and configuration for your workload.</p>
@@ -300,6 +305,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>In some circles, window functions are considered "Advanced SQL". In this presentation, I will show you how easy and powerful they actually are.</p>
@@ -323,6 +329,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>Modern data tools often rely on PostgreSQL in ways that go far beyond traditional CRUD applications. In this session, we'll explore how we used PostgreSQL as a metadata engine to power a dynamic data manipulation platform that connects to external databases, transforms tables, and drives analytical dashboards. We'll walk through the architectural decisions behind separating metadata (PostgreSQL) from analytical storage (ClickHouse), and why that boundary matters. The talk will cover schema design strategies, query generation patterns, and performance considerations when users can define transformations dynamically. We'll also share lessons learned from production — including what broke, what scaled, and what we would redesign. Attendees will leave with practical insights on using PostgreSQL as the control layer of a modern data platform.</p>
@@ -350,6 +357,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>You have heard great things about Postgres 18, but you just haven't had time to look into it. Sure, you want to learn more, but sitting through a bunch of slides sounds like a chore. What you really want is to see the features in Postgres 18 in action, so you can figure out what will help make your users (and you!) happier with as little work as possible. I'm Robert Treat, and I've put together a whirlwind tour of new features available in Postgres 18. I think I know what will help you get the most bang for the buck, but if I am wrong, we can choose the features that you want to see most. That's right, there are no slides in this presentation, not even an about-me slide; we're going straight into the database to help you learn what options will help you make the best case to get you upgraded.</p>
@@ -371,6 +379,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>HugePages often sound simple ("use large pages for shared memory"), but in practice people get stuck on the same questions: what they actually change, how to calculate the right amount, and how to confirm the system is using them correctly. In this talk I will explain HugePages in plain language, then walk through a clear sizing approach you can repeat on your own systems. You'll leave knowing what to check before enabling them, what common mistakes to avoid, and how to decide if HugePages are worth it for your workload. I'll finish with benchmark results comparing performance with and without HugePages.</p>
@@ -392,6 +401,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <span class="schedule-expand-chevron" aria-hidden="true"></span>
                                 </summary>
                                 <div class="schedule-expand-description">
                                     <p>Large language models are good at generating text, but can't easily report discrete, dynamic, and always-accurate results. They also can't take external actions. The model context protocol (MCP) has become the standard way for generative AI models to access external data and take external actions. This talk explains the purpose of MCPs, how they are used, and shows examples of database and non-database MCP servers.</p>

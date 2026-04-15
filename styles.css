@@ -521,10 +521,38 @@ img {
     border-bottom: none;
     list-style: none;
     cursor: pointer;
+    position: relative;
+    padding-right: 40px;
 }
 
 #schedule .schedule-expand-details summary.schedule-row::-webkit-details-marker {
     display: none;
+}
+
+#schedule .schedule-expand-details summary.schedule-row::-moz-details-marker {
+    display: none;
+}
+
+#schedule .schedule-expand-details .schedule-expand-chevron {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 1.35rem;
+    height: 1.35rem;
+    flex-shrink: 0;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e6bf1' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.75;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#schedule .schedule-expand-details[open] .schedule-expand-chevron {
+    transform: translateY(-50%) rotate(90deg);
+    opacity: 1;
 }
 
 #schedule .schedule-expand-details summary.schedule-row:focus-visible {
