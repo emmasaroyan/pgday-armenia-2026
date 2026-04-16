@@ -1027,15 +1027,6 @@ img {
     object-fit: contain;
 }
 
-.sponsor-intro-more {
-    margin: 68px 0 0;
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--elephant-blue);
-    text-align: center;
-    line-height: 1.45;
-}
-
 .sponsor-logo-row {
     display: flex;
     justify-content: center;
