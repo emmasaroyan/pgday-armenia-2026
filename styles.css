@@ -333,7 +333,7 @@ img {
     text-align: center;
     border-radius: 999px;
     border: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 @media (max-width: 640px) {
