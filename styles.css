@@ -993,14 +993,6 @@ img {
     border-radius: 4px;
 }
 
-.sponsor-intro-card .sponsor-logo--aws {
-    max-height: none;
-    height: auto;
-    width: min(var(--sponsor-platinum-logo-max), 100%);
-    max-width: 100%;
-    object-fit: contain;
-}
-
 .sponsor-jetbrains-site {
     display: inline-block;
     line-height: 0;
@@ -1046,6 +1038,16 @@ img {
 .sponsor-logo--aws {
     max-height: 56px;
     max-width: min(200px, 48vw);
+}
+
+/* Must follow .sponsor-logo--aws: higher specificity + intrinsic SVG size fixes Firefox flex + min(%,100%) collapse */
+.sponsor-intro-card .sponsor-logo--aws {
+    display: block;
+    max-height: none;
+    height: auto;
+    width: auto;
+    max-width: min(var(--sponsor-platinum-logo-max), 100%);
+    object-fit: contain;
 }
 
 .container {
