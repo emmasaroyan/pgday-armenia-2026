@@ -326,6 +326,10 @@ img {
     min-height: 3.1em;
 }
 
+#get-your-ticket .ticket-card--individual .ticket-card-text {
+    margin-bottom: calc(12px + 1.55em);
+}
+
 #get-your-ticket .ticket-card-button {
     display: block;
     width: 100%;
