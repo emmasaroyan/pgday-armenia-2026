@@ -273,6 +273,9 @@ img {
 }
 
 #get-your-ticket .ticket-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: #ffffff;
     border-radius: 14px;
     padding: 24px 22px;
@@ -319,6 +322,8 @@ img {
     font-size: 15px;
     line-height: 1.55;
     color: #334155;
+    /* Match two-line student blurb so price + perks align with individual card */
+    min-height: 3.1em;
 }
 
 #get-your-ticket .ticket-card-button {
