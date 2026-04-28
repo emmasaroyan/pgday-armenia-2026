@@ -969,6 +969,10 @@ img {
     margin: 80px 0 44px;
 }
 
+.sponsor-intro-tier-label--bronze {
+    margin: 80px 0 44px;
+}
+
 .sponsor-intro-card .sponsor-logo-row {
     margin-top: 0;
 }
@@ -1014,6 +1018,33 @@ img {
     outline: 2px solid var(--elephant-blue);
     outline-offset: 4px;
     border-radius: 4px;
+}
+
+.sponsor-cybertec-site {
+    display: inline-block;
+    line-height: 0;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.sponsor-cybertec-site:hover .sponsor-logo--cybertec {
+    opacity: 0.92;
+}
+
+.sponsor-cybertec-site:focus-visible {
+    outline: 2px solid var(--elephant-blue);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.sponsor-intro-card .sponsor-logo--cybertec {
+    display: block;
+    width: auto;
+    max-height: 56px;
+    max-width: min(260px, 100%);
+    height: auto;
+    object-fit: contain;
 }
 
 .sponsor-intro-card .sponsor-logo--jetbrains {
