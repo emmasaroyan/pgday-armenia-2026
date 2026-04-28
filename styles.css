@@ -1035,6 +1035,9 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .sponsor-cybertec-site:hover .sponsor-logo--cybertec {
