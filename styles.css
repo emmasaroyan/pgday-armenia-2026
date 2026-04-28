@@ -1028,6 +1028,13 @@ img {
     cursor: pointer;
 }
 
+.sponsor-intro-card .sponsor-cybertec-site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .sponsor-cybertec-site:hover .sponsor-logo--cybertec {
     opacity: 0.92;
 }
@@ -1077,15 +1084,14 @@ img {
     object-fit: contain;
 }
 
-/* Placed after .sponsor-intro-card .sponsor-logo--aws; intrinsic width/height + no 100% min() avoids collapsed width */
+/* Match Platinum/AWS/JetBrains visual width band; intrinsic PNG dimensions keep Firefox happy */
 .sponsor-intro-card .sponsor-logo--cybertec {
     display: block;
-    box-sizing: border-box;
     width: auto;
     height: auto;
-    max-height: 56px;
-    max-width: 260px;
-    min-width: 180px;
+    max-width: min(var(--sponsor-platinum-logo-max), 100%);
+    max-height: none;
+    margin: 0 auto;
     object-fit: contain;
 }
 
