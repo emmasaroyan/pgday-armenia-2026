@@ -1084,10 +1084,10 @@ img {
     object-fit: contain;
 }
 
-/* Half the max width of JetBrains (1.35 × platinum) in this card */
+/* Half the max width of JetBrains (1.22 × platinum) in this card */
 .sponsor-intro-card .sponsor-logo--cybertec {
     display: block;
-    width: min(calc(var(--sponsor-platinum-logo-max) * 1.35 / 2), 100%);
+    width: min(calc(var(--sponsor-platinum-logo-max) * 1.22 / 2), 100%);
     max-width: 100%;
     height: auto;
     margin: 0 auto;
