@@ -1084,13 +1084,12 @@ img {
     object-fit: contain;
 }
 
-/* Match Platinum/AWS/JetBrains visual width band; intrinsic PNG dimensions keep Firefox happy */
+/* Half the max width of JetBrains (1.22 × platinum) in this card */
 .sponsor-intro-card .sponsor-logo--cybertec {
     display: block;
-    width: auto;
+    width: min(calc(var(--sponsor-platinum-logo-max) * 1.22 / 2), 100%);
+    max-width: 100%;
     height: auto;
-    max-width: min(var(--sponsor-platinum-logo-max), 100%);
-    max-height: none;
     margin: 0 auto;
     object-fit: contain;
 }
