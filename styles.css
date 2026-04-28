@@ -1038,15 +1038,6 @@ img {
     border-radius: 4px;
 }
 
-.sponsor-intro-card .sponsor-logo--cybertec {
-    display: block;
-    width: auto;
-    max-height: 56px;
-    max-width: min(260px, 100%);
-    height: auto;
-    object-fit: contain;
-}
-
 .sponsor-intro-card .sponsor-logo--jetbrains {
     display: block;
     width: min(calc(var(--sponsor-platinum-logo-max) * 1.22), 100%);
@@ -1083,6 +1074,18 @@ img {
     height: auto;
     width: auto;
     max-width: min(var(--sponsor-platinum-logo-max), 100%);
+    object-fit: contain;
+}
+
+/* Placed after .sponsor-intro-card .sponsor-logo--aws; intrinsic width/height + no 100% min() avoids collapsed width */
+.sponsor-intro-card .sponsor-logo--cybertec {
+    display: block;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-height: 56px;
+    max-width: 260px;
+    min-width: 180px;
     object-fit: contain;
 }
 
