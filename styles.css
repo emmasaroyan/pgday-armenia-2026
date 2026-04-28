@@ -946,7 +946,8 @@ img {
 
 .sponsor-intro .meet-host-card.sponsor-intro-card {
     --sponsor-platinum-logo-max: 340px;
-    --sponsor-gold-logo-mult: 1.45;
+    /* Gold (JetBrains) only; AWS & CYBERTEC sizing do not use this */
+    --sponsor-gold-logo-mult: 1.62;
 
     margin: 28px auto 0;
     max-width: 720px;
@@ -1085,13 +1086,10 @@ img {
     object-fit: contain;
 }
 
-/* One-third of JetBrains max width (same --sponsor-gold-logo-mult on this card) */
+/* Fixed at ×1.45/3 of platinum (decoupled from --sponsor-gold-logo-mult so Gold can scale alone) */
 .sponsor-intro-card .sponsor-logo--cybertec {
     display: block;
-    width: min(
-        calc(var(--sponsor-platinum-logo-max) * var(--sponsor-gold-logo-mult) / 3),
-        100%
-    );
+    width: min(calc(var(--sponsor-platinum-logo-max) * 1.45 / 3), 100%);
     max-width: 100%;
     height: auto;
     margin: 0 auto;
