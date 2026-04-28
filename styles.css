@@ -1089,10 +1089,10 @@ img {
     object-fit: contain;
 }
 
-/* Fixed at ×1.55/3 of platinum (decoupled from --sponsor-gold-logo-mult so Gold can scale alone) */
+/* Fixed at ×1.45/3 of platinum (decoupled from --sponsor-gold-logo-mult so Gold can scale alone) */
 .sponsor-intro-card .sponsor-logo--cybertec {
     display: block;
-    width: min(calc(var(--sponsor-platinum-logo-max) * 1.55 / 3), 100%);
+    width: min(calc(var(--sponsor-platinum-logo-max) * 1.45 / 3), 100%);
     max-width: 100%;
     height: auto;
     margin: 0 auto;
