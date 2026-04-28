@@ -946,6 +946,7 @@ img {
 
 .sponsor-intro .meet-host-card.sponsor-intro-card {
     --sponsor-platinum-logo-max: 340px;
+    --sponsor-gold-logo-mult: 1.45;
 
     margin: 28px auto 0;
     max-width: 720px;
@@ -1047,7 +1048,7 @@ img {
 
 .sponsor-intro-card .sponsor-logo--jetbrains {
     display: block;
-    width: min(calc(var(--sponsor-platinum-logo-max) * 1.35), 100%);
+    width: min(calc(var(--sponsor-platinum-logo-max) * var(--sponsor-gold-logo-mult)), 100%);
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -1084,10 +1085,13 @@ img {
     object-fit: contain;
 }
 
-/* Half the max width of JetBrains (1.22 × platinum) in this card */
+/* One-third of JetBrains max width (same --sponsor-gold-logo-mult on this card) */
 .sponsor-intro-card .sponsor-logo--cybertec {
     display: block;
-    width: min(calc(var(--sponsor-platinum-logo-max) * 1.22 / 2), 100%);
+    width: min(
+        calc(var(--sponsor-platinum-logo-max) * var(--sponsor-gold-logo-mult) / 3),
+        100%
+    );
     max-width: 100%;
     height: auto;
     margin: 0 auto;
